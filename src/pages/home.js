@@ -4,8 +4,10 @@ function Home() {
     const [showmore,setshowmore]= useState(false);
 
     return (
-      <div>
-            <h1>Welcme to Thee portfolio</h1>
+      <div style={{textAlign:"center"}}>
+          <img src="/nature3.jpeg" alt="nature" width="1000" style={{borderRadius: "50%"}}/>
+          <h1>Welcme to Thee portfolio</h1>
+
             <p>I am a react dev!</p>
             {showmore && <p>i enjoy frontend development and playing.</p>}
             <button onClick={()=>setshowmore(!showmore)}>

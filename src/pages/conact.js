@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+
+
 function Contact() {
-    const [form, setForm] = useState({ name: "", message: "" });
+    const [form, setForm] = useState({ name: "", email: "", message: "" });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -10,36 +12,47 @@ function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         alert(`Thanks ${form.name}, we received your message.`);
-        setForm({ name: "", message: "" });
+        setForm({ name: "", email: "", message: "" });
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="name-input">Name:</label>
-                <input
-                    id="name-input"
-                    type="text"
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-
-            <div>
-                <label htmlFor="message-input">Message:</label>
-                <textarea
-                    id="message-input"
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-
-            <button type="submit">Send</button>
-        </form>
+        <div className="center-container">
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label htmlFor="name-input">Name:</label>
+                    <input
+                        id="name-input"
+                        type="text"
+                        name="name"
+                        value={form.name}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="email-input">Email:</label>
+                    <input
+                        id="email-input"
+                        type="email"
+                        name="email"
+                        value={form.email}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor="message-input">Message:</label>
+                    <textarea
+                        id="message-input"
+                        name="message"
+                        value={form.message}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     );
 }
 export default Contact;

@@ -1,47 +1,93 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Orbitron', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #0f2027, #2c5364 80%);
+  color: #e0e0e0;
 }
 
 .navbar {
-  background: #333;
-  color: #fff;
-  padding: 1rem;
+  background: rgba(20, 20, 40, 0.85);
+  color: #00ffe7;
+  padding: 1.2rem 2rem;
   display: flex;
   justify-content: space-between;
+  box-shadow: 0 4px 24px 0 rgba(0,255,231,0.1);
+  border-bottom: 1px solid #00ffe7;
+  backdrop-filter: blur(8px);
 }
 
 .navbar a {
-  margin-left: 1rem;
-  color: yellow;
+  margin-left: 1.5rem;
+  color: #00ffe7;
+  text-shadow: 0 0 8px #00ffe7, 0 0 2px #fff;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #fff;
 }
 
 .container {
-  padding: 2rem;
+  padding: 2.5rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0,255,231,0.18);
+  margin: 2rem auto;
+  max-width: 700px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  max-width: 400px;
+  gap: 1.2rem;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 input, textarea {
-  padding: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #00ffe7;
+  background: rgba(20, 20, 40, 0.7);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 8px #00ffe733;
+}
+
+input:focus, textarea:focus {
+  border: 1.5px solid #fff;
+  box-shadow: 0 0 12px #00ffe7;
 }
 
 button {
-  padding: 0.5rem;
-  background-color: #333;
-  color: white;
+  padding: 0.7rem 1.2rem;
+  background: linear-gradient(90deg, #00ffe7 0%, #007cf0 100%);
+  color: #222;
   border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 16px #00ffe755;
+  transition: background 0.2s, color 0.2s;
 }
+
+button:hover {
+  background: linear-gradient(90deg, #007cf0 0%, #00ffe7 100%);
+  color: #fff;
+}
+
 .center-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: transparent;
 }
